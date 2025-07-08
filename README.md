@@ -7,8 +7,7 @@ A clean and responsive weather application that delivers live weather conditions
 ## 🔍 **Explore the App**
 
 Experience the live version here:  
-**[Sky Cast Live Demo](https://nehasri-257.github.io/weather_app3/)**
-
+**[Sky Cast Live Demo](https://nehasri-257.github.io/weather_app/)**
 ---
 
 ## ✨ **Features**
