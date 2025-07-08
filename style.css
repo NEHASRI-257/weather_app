@@ -4,21 +4,190 @@ body {
   margin: 0;
   padding: 40px 20px;
   font-family: 'Poppins', sans-serif;
-  background: linear-gradient(135deg, #1e3c72, #2a5298);
-  background-attachment: fixed;
+  background: #1e3c72; /* solid dark blue */
   color: #f5f5f5;
 }
 
-/* -------------------- */
-/*     PAGE WRAPPER     */
-/* -------------------- */
+/* PAGE WRAPPER */
 .page-wrapper {
   max-width: 900px;
   margin: auto;
-  background-color: #212529;
+  background-color: #212529; /* solid dark background, NO transparency */
   border-radius: 20px;
   padding: 40px 30px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+}
+
+/* TITLE + TAGLINE */
+.display-2 {
+  font-size: 3rem;
+  text-align: center;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+#tagline {
+  text-align: center;
+  color: #ccc;
+  margin-bottom: 30px;
+  font-style: italic;
+  font-size: 1.1rem;
+}
+
+/* INPUT SECTION */
+#input-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+@media (min-width: 576px) {
+  #input-container {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+#input {
+  padding: 12px 18px;
+  border-radius: 30px;
+  border: 1px solid #555;
+  background-color: #343a40; /* solid dark */
+  color: #fff;
+  width: 100%;
+  max-width: 300px;
+  outline: none;
+  transition: box-shadow 0.3s ease;
+}
+
+#input:focus {
+  border-color: #00b4d8;
+  box-shadow: 0 0 5px rgba(0, 180, 216, 0.7);
+}
+
+#input::placeholder {
+  color: #aaa;
+}
+
+/* BUTTON */
+#button {
+  padding: 12px 24px;
+  font-size: 16px;
+  border: none;
+  border-radius: 30px;
+  background: linear-gradient(45deg, #00b4d8, #0077b6);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 180, 216, 0.3);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 16px rgba(0, 180, 216, 0.5);
+}
+
+/* OUTPUT CONTAINER */
+#output-container {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  align-items: center;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+#output-container.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* CURRENT WEATHER */
+#current-div {
+  width: 100%;
+  max-width: 450px;
+  padding: 20px;
+  border-radius: 15px;
+  background-color: #343a40; /* solid dark */
+  text-align: center;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6);
+  color: #f5f5f5;
+}
+
+#current-div h3,
+#current-div h5,
+#current-div h4,
+#current-div p {
+  margin: 10px 0;
+}
+
+#current-div img {
+  width: 90px;
+  margin-top: 10px;
+}
+
+/* FORECAST SECTION */
+#forecast-div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  width: 100%;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+#forecast-div.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* FORECAST CARD */
+.forecast-card {
+  background-color: #495057; /* solid gray */
+  border-radius: 15px;
+  padding: 15px;
+  width: 140px;
+  text-align: center;
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease;
+}
+
+.forecast-card:hover {
+  transform: scale(1.05);
+}
+
+.forecast-card img {
+  width: 60px;
+  margin-bottom: 10px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 576px) {
+  .display-2 {
+    font-size: 2.2rem;
+  }
+
+  #button {
+    font-size: 14px;
+    padding: 10px 18px;
+  }
+
+  #input {
+    font-size: 14px;
+  }
+
+  .forecast-card {
+    width: 120px;
+  }
+}
+
 
 
 
