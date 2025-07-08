@@ -1,48 +1,29 @@
-# Sky Cast
-
-
-**Sky Cast** A clean and responsive weather application that delivers live weather conditions and short-term forecasts for any city around the world, powered by the OpenWeatherMap API.
+# Sky Cast  
+A clean and responsive weather application that delivers live weather conditions and short-term forecasts for any city around the world, powered by the OpenWeatherMap API.
 
 ---
 
-## 🔗 Live Demo
+## Explore the app here
 
-👉 [View the live demo here]()
-
----
-
-## 🌟 Features
-
-- 📍 Displays **current weather** data for the searched city, including temperature 🌡️, humidity 💧, and weather description ☁️  
-- ⏰ Shows a **short-term weather forecast** with data points for the next few hours of the current day  
-- 🧱 Built with **HTML**, **CSS**, **Bootstrap**, and **Vanilla JavaScript**  
-- 🌐 Uses the **OpenWeatherMap API** for fetching weather and forecast data  
-- 📱 Fully **responsive** design that works smoothly across all device sizes and screen resolutions  
+👉 [Live demo](https://nehasri-257.github.io/weather_app3/)
 
 ---
 
-## ⚙️ How It Works
+## Features
 
-1. 🏙️ Users enter the name of any city in the input field  
-2. 🌍 The app fetches **current weather** and a **forecast for the day** using the OpenWeatherMap API  
-3. 📊 The current weather section shows temperature 🌡️, humidity 💧, weather condition 🌤️, and an icon  
-4. 🔮 The forecast section displays several upcoming time slots with predicted temperatures and weather icons  
-5. 🧠 The interface updates dynamically with smooth animations for a better user experience  
+- Current Weather: Temperature, humidity, and conditions for your chosen city.  
+- Short-term Forecast: Upcoming weather updates in hourly intervals.  
+- Responsive Design: Works seamlessly on desktop, tablet, and mobile devices.  
+- Clean UI: Simple and user-friendly interface built with Bootstrap and custom CSS.  
+- Vanilla JavaScript: No dependencies besides Bootstrap, easy to customize and extend.
 
 ---
 
 ## 🛠️ Technologies Used
 
-- 🧾 **HTML5** for semantic structure  
-- 🎨 **CSS3** and **Bootstrap 5** for styling and responsive layout  
-- ⚡ **JavaScript (Vanilla)** for API calls and dynamic content rendering  
-- ☁️ [**OpenWeatherMap API**](https://openweathermap.org/api) for real-time weather and forecast data  
+- HTML5 – for structuring the web page  
+- CSS3 – for styling and responsive layout  
+- Bootstrap 5 – for layout components and grid system  
+- JavaScript (Vanilla) – for DOM manipulation and API interaction  
+- OpenWeatherMap API – for fetching current and forecast weather data
 
----
-
-## 👨‍💻 About the Developer
-
-Created by [**Sudhir**](https://github.com/SudhirKannan)  
-💡 Passionate about building practical web applications using modern web technologies.
-
----
