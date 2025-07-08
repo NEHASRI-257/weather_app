@@ -1,4 +1,4 @@
-console.log("Created by Sudhir");
+
 
 // Select DOM elements for interaction and display
 const input = document.querySelector('#input');
