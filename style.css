@@ -144,7 +144,6 @@ body {
   flex: 1 1 50%;
   max-width: 400px;
   
-  /* Change to grid layout: 3 columns first row, 2 columns second */
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: auto auto;
@@ -210,14 +209,8 @@ body {
     flex: none;
   }
 
-  #forecast-div {
-    /* revert to horizontal scroll on smaller screens */
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    gap: 15px;
-  }
+  /* Removed the flexbox override on #forecast-div here so grid stays */
+  /* If you want a scroll on small devices, you can add that on forecast-card instead */
 
   .forecast-card {
     flex-direction: column;
@@ -234,4 +227,3 @@ body {
     text-align: center;
   }
 }
-
