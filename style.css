@@ -1,46 +1,41 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+/* -------------------------------------- */
+/*           GLOBAL STYLING               */
+/* -------------------------------------- */
 
 body {
-  margin: 0;
-  padding: 40px 20px;
+  background-color: #faf9f6;
   font-family: 'Poppins', sans-serif;
-  background: #1e3c72; /* solid dark blue */
-  color: #f5f5f5;
+  margin: 0;
+  padding: 60px 0 0 0;
+  color: #333;
 }
 
-/* PAGE WRAPPER */
-.page-wrapper {
-  max-width: 900px;
-  margin: auto;
-  background-color: #212529; /* solid dark background, NO transparency */
-  border-radius: 20px;
-  padding: 40px 30px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
-}
-
-/* TITLE + TAGLINE */
 .display-2 {
-  font-size: 3rem;
   text-align: center;
-  color: #ffffff;
-  margin-bottom: 10px;
+  color: #4db6ac;
+  font-weight: 700;
+  margin: 30px 0;
+  font-size: 3rem;
 }
 
 #tagline {
   text-align: center;
-  color: #ccc;
-  margin-bottom: 30px;
-  font-style: italic;
-  font-size: 1.1rem;
+  font-weight: 500;
+  color: #7a7a7a;
+  margin-bottom: 25px;
+  font-size: 1.2rem;
 }
 
-/* INPUT SECTION */
+/* -------------------------------------- */
+/*            INPUT SECTION               */
+/* -------------------------------------- */
+
 #input-container {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 12px;
   align-items: center;
-  margin-bottom: 30px;
+  margin: 20px 0;
 }
 
 @media (min-width: 576px) {
@@ -52,50 +47,48 @@ body {
 
 #input {
   padding: 12px 18px;
-  border-radius: 30px;
-  border: 1px solid #555;
-  background-color: #343a40; /* solid dark */
-  color: #fff;
+  font-size: 16px;
+  border-radius: 25px;
+  border: 2px solid #4db6ac;
   width: 100%;
   max-width: 300px;
   outline: none;
-  transition: box-shadow 0.3s ease;
+  transition: border-color 0.3s ease;
 }
 
 #input:focus {
-  border-color: #00b4d8;
-  box-shadow: 0 0 5px rgba(0, 180, 216, 0.7);
+  border-color: #f3b562;
+  box-shadow: 0 0 8px #f3b562aa;
 }
 
-#input::placeholder {
-  color: #aaa;
-}
+/* -------------------------------------- */
+/*               BUTTON                   */
+/* -------------------------------------- */
 
-/* BUTTON */
 #button {
-  padding: 12px 24px;
+  padding: 12px 28px;
   font-size: 16px;
   border: none;
-  border-radius: 30px;
-  background: linear-gradient(45deg, #00b4d8, #0077b6);
+  border-radius: 25px;
+  background-color: #4db6ac;
   color: white;
-  font-weight: bold;
   cursor: pointer;
-  box-shadow: 0 4px 12px rgba(0, 180, 216, 0.3);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
 }
 
 #button:hover {
-  transform: scale(1.05);
-  box-shadow: 0 6px 16px rgba(0, 180, 216, 0.5);
+  background-color: #399b94;
 }
 
-/* OUTPUT CONTAINER */
+/* -------------------------------------- */
+/*          OUTPUT CONTAINER              */
+/* -------------------------------------- */
+
 #output-container {
   display: flex;
-  flex-direction: column;
-  gap: 25px;
-  align-items: center;
+  gap: 40px;
+  justify-content: center;
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 0.6s ease, transform 0.6s ease;
@@ -106,37 +99,53 @@ body {
   transform: translateY(0);
 }
 
-/* CURRENT WEATHER */
+/* -------------------------------------- */
+/*           CURRENT WEATHER              */
+/* -------------------------------------- */
+
 #current-div {
-  width: 100%;
-  max-width: 450px;
-  padding: 20px;
-  border-radius: 15px;
-  background-color: #343a40; /* solid dark */
+  flex: 1 1 40%;
+  max-width: 400px;
+  padding: 30px;
+  background-color: #a8d5ba;
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
   text-align: center;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6);
-  color: #f5f5f5;
+  color: #2f4f4f;
 }
 
-#current-div h3,
-#current-div h5,
-#current-div h4,
-#current-div p {
-  margin: 10px 0;
+#current-div h3 {
+  font-size: 2.8rem;
+  margin-bottom: 12px;
+}
+
+#current-div h4 {
+  font-size: 1.8rem;
+  margin: 18px 0;
+  font-weight: 600;
 }
 
 #current-div img {
-  width: 90px;
-  margin-top: 10px;
+  width: 110px;
+  margin: 20px 0;
 }
 
-/* FORECAST SECTION */
+#current-div p {
+  font-size: 1.1rem;
+  margin: 8px 0;
+  font-weight: 500;
+}
+
+/* -------------------------------------- */
+/*           FORECAST SECTION             */
+/* -------------------------------------- */
+
 #forecast-div {
+  flex: 1 1 50%;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 15px;
-  width: 100%;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 350px;
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 0.6s ease, transform 0.6s ease;
@@ -147,46 +156,79 @@ body {
   transform: translateY(0);
 }
 
-/* FORECAST CARD */
+/* -------------------------------------- */
+/*             FORECAST CARD              */
+/* -------------------------------------- */
+
 .forecast-card {
-  background-color: #495057; /* solid gray */
-  border-radius: 15px;
-  padding: 15px;
-  width: 140px;
-  text-align: center;
-  color: #fff;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
-  transition: transform 0.3s ease;
+  background-color: #f3b562;
+  padding: 20px;
+  border-radius: 18px;
+  color: #4a3c1b;
+  text-align: left;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.forecast-card img {
+  width: 70px;
+  border-radius: 12px;
+  flex-shrink: 0;
+}
+
+.forecast-card p {
+  margin: 4px 0;
+  font-size: 1.05rem;
+  font-weight: 600;
 }
 
 .forecast-card:hover {
   transform: scale(1.05);
+  box-shadow: 0 10px 30px rgba(243, 181, 98, 0.4);
 }
 
-.forecast-card img {
-  width: 60px;
-  margin-bottom: 10px;
-}
+/* -------------------------------------- */
+/*            RESPONSIVE CSS              */
+/* -------------------------------------- */
 
-/* RESPONSIVE */
-@media (max-width: 576px) {
-  .display-2 {
-    font-size: 2.2rem;
+@media (max-width: 768px) {
+  #output-container {
+    flex-direction: column;
+    gap: 30px;
   }
 
-  #button {
-    font-size: 14px;
-    padding: 10px 18px;
+  #current-div,
+  #forecast-div {
+    max-width: 100%;
+    flex: none;
   }
 
-  #input {
-    font-size: 14px;
+  #forecast-div {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 15px;
   }
 
   .forecast-card {
-    width: 120px;
+    flex-direction: column;
+    align-items: center;
+    width: 140px;
+  }
+
+  .forecast-card img {
+    width: 60px;
+  }
+
+  .forecast-card p {
+    font-size: 0.95rem;
+    text-align: center;
   }
 }
+
 
 
 
