@@ -1,214 +1,25 @@
-/* --------------------- */
-/*       GLOBAL          */
-/* --------------------- */
-
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
 body {
   margin: 0;
   padding: 40px 20px;
   font-family: 'Poppins', sans-serif;
-  background: url('https://source.unsplash.com/1600x900/?sky,clouds') no-repeat center center fixed;
-  background-size: cover;
-  color: #f0f0f0;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  background-attachment: fixed;
+  color: #f5f5f5;
 }
 
-/* --------------------- */
-/*       PAGE WRAPPER    */
-/* --------------------- */
-
+/* -------------------- */
+/*     PAGE WRAPPER     */
+/* -------------------- */
 .page-wrapper {
   max-width: 900px;
   margin: auto;
-  background: rgba(255, 255, 255, 0.08);
+  background-color: #212529;
   border-radius: 20px;
-  padding: 40px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(15px);
-}
+  padding: 40px 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
 
-/* --------------------- */
-/*     TITLE + TAGLINE   */
-/* --------------------- */
-
-.display-2 {
-  font-size: 3rem;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  text-align: center;
-  color: #ffffff;
-  text-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
-}
-
-#tagline {
-  font-size: 1.1rem;
-  font-style: italic;
-  text-align: center;
-  color: #ddd;
-  margin-bottom: 30px;
-}
-
-/* --------------------- */
-/*     INPUT SECTION     */
-/* --------------------- */
-
-#input-container {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  align-items: center;
-  margin-bottom: 30px;
-}
-@media (min-width: 576px) {
-  #input-container {
-    flex-direction: row;
-    justify-content: center;
-  }
-}
-
-#input {
-  padding: 12px 20px;
-  border: none;
-  border-radius: 25px;
-  background: rgba(255, 255, 255, 0.2);
-  color: #fff;
-  backdrop-filter: blur(5px);
-  outline: none;
-  width: 100%;
-  max-width: 280px;
-  box-shadow: inset 0 0 8px rgba(255, 255, 255, 0.2);
-}
-#input::placeholder {
-  color: #ddd;
-}
-
-/* --------------------- */
-/*        BUTTON         */
-/* --------------------- */
-
-#button {
-  background: linear-gradient(to right, #ff4b2b, #ff416c);
-  border: none;
-  color: white;
-  padding: 12px 28px;
-  border-radius: 30px;
-  font-weight: 600;
-  cursor: pointer;
-  box-shadow: 0 0 12px rgba(255, 65, 108, 0.5);
-  transition: all 0.3s ease-in-out;
-}
-#button:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 20px rgba(255, 65, 108, 0.8);
-}
-
-/* --------------------- */
-/*     OUTPUT CONTAINER  */
-/* --------------------- */
-
-#output-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 30px;
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
-}
-#output-container.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* --------------------- */
-/*     CURRENT WEATHER   */
-/* --------------------- */
-
-#current-div {
-  width: 100%;
-  max-width: 450px;
-  padding: 20px;
-  border-radius: 20px;
-  background: rgba(255, 255, 255, 0.12);
-  backdrop-filter: blur(8px);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
-  text-align: center;
-  animation: fadeInUp 0.8s ease forwards;
-}
-#current-div img {
-  width: 90px;
-  margin-top: 10px;
-}
-#current-div p {
-  margin: 10px 0;
-  font-size: 16px;
-}
-
-/* --------------------- */
-/*     FORECAST SECTION  */
-/* --------------------- */
-
-#forecast-div {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  width: 100%;
-  animation: fadeInUp 0.8s ease forwards;
-}
-
-/* --------------------- */
-/*     FORECAST CARDS    */
-/* --------------------- */
-
-.forecast-card {
-  background: rgba(255, 255, 255, 0.12);
-  border-radius: 15px;
-  padding: 15px;
-  text-align: center;
-  color: #fff;
-  backdrop-filter: blur(8px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
-  transition: transform 0.3s ease;
-}
-.forecast-card:hover {
-  transform: scale(1.05);
-}
-
-/* --------------------- */
-/*     ANIMATIONS        */
-/* --------------------- */
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* --------------------- */
-/*     RESPONSIVE        */
-/* --------------------- */
-
-@media (max-width: 576px) {
-  .forecast-card {
-    font-size: 14px;
-  }
-  #input {
-    font-size: 14px;
-  }
-  #button {
-    font-size: 14px;
-    padding: 10px 20px;
-  }
-  .display-2 {
-    font-size: 2rem;
-  }
-}
 
 
 
