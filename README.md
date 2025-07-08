@@ -1,12 +1,13 @@
-# 🌦️ Rain or Shine
+# Sky Cast
 
-**Rain or Shine** is a responsive single-page weather web application that provides **real-time weather information** for any city worldwide using the OpenWeatherMap API.
+
+**Sky Cast** A clean and responsive weather application that delivers live weather conditions and short-term forecasts for any city around the world, powered by the OpenWeatherMap API.
 
 ---
 
 ## 🔗 Live Demo
 
-👉 [View the live demo here](https://sudhirkannan.github.io/Weather-app/)
+👉 [View the live demo here]()
 
 ---
 
