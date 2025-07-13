@@ -1,20 +1,23 @@
-/* -------------------------------------- */
-/*           GLOBAL STYLING               */
-/* -------------------------------------- */
+/* ------------------ GLOBAL STYLES ------------------ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 body {
   background-color: #faf9f6;
   font-family: 'Poppins', sans-serif;
-  margin: 0;
-  padding: 60px 0 0 0;
+  overflow-x: hidden;
   color: #333;
+  padding-top: 60px;
 }
 
 .display-2 {
   text-align: center;
   color: #4db6ac;
   font-weight: 700;
-  margin: 30px 0;
   font-size: 3rem;
 }
 
@@ -26,9 +29,7 @@ body {
   font-size: 1.2rem;
 }
 
-/* -------------------------------------- */
-/*            INPUT SECTION               */
-/* -------------------------------------- */
+/* ------------------ INPUT SECTION ------------------ */
 
 #input-container {
   display: flex;
@@ -61,10 +62,6 @@ body {
   box-shadow: 0 0 8px #f3b562aa;
 }
 
-/* -------------------------------------- */
-/*               BUTTON                   */
-/* -------------------------------------- */
-
 #button {
   padding: 12px 28px;
   font-size: 16px;
@@ -81,9 +78,7 @@ body {
   background-color: #399b94;
 }
 
-/* -------------------------------------- */
-/*          OUTPUT CONTAINER              */
-/* -------------------------------------- */
+/* ------------------ OUTPUT SECTION ------------------ */
 
 #output-container {
   display: flex;
@@ -99,9 +94,7 @@ body {
   transform: translateY(0);
 }
 
-/* -------------------------------------- */
-/*           CURRENT WEATHER              */
-/* -------------------------------------- */
+/* ------------------ CURRENT WEATHER ------------------ */
 
 #current-div {
   flex: 1 1 40%;
@@ -136,19 +129,14 @@ body {
   font-weight: 500;
 }
 
-/* -------------------------------------- */
-/*           FORECAST SECTION             */
-/* -------------------------------------- */
+/* ------------------ FORECAST SECTION ------------------ */
 
 #forecast-div {
   flex: 1 1 50%;
   max-width: 400px;
-
   display: grid;
-  grid-template-columns: 1fr; /* single column */
-  grid-template-rows: repeat(5, auto); /* 5 rows for forecast cards */
+  grid-template-columns: 1fr;
   gap: 20px;
-
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 0.6s ease, transform 0.6s ease;
@@ -159,9 +147,7 @@ body {
   transform: translateY(0);
 }
 
-/* -------------------------------------- */
-/*             FORECAST CARD              */
-/* -------------------------------------- */
+/* ------------------ FORECAST CARD ------------------ */
 
 .forecast-card {
   background-color: #f3b562;
@@ -170,22 +156,10 @@ body {
   color: #4a3c1b;
   text-align: left;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
-  display: flex;
-  align-items: center;
-  gap: 18px;
+  display: grid;
+  grid-template-rows: auto auto;
+  gap: 10px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.forecast-card img {
-  width: 70px;
-  border-radius: 12px;
-  flex-shrink: 0;
-}
-
-.forecast-card p {
-  margin: 4px 0;
-  font-size: 1.05rem;
-  font-weight: 600;
 }
 
 .forecast-card:hover {
@@ -193,9 +167,18 @@ body {
   box-shadow: 0 10px 30px rgba(243, 181, 98, 0.4);
 }
 
-/* -------------------------------------- */
-/*            RESPONSIVE CSS              */
-/* -------------------------------------- */
+.forecast-card img {
+  width: 60px;
+  border-radius: 10px;
+}
+
+.forecast-card p {
+  margin: 4px 0;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+/* ------------------ RESPONSIVE ------------------ */
 
 @media (max-width: 768px) {
   #output-container {
@@ -209,29 +192,13 @@ body {
     flex: none;
   }
 
-  #forecast-div {
-    /* revert to horizontal scroll on smaller screens */
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    gap: 15px;
-  }
-
   .forecast-card {
-    flex-direction: column;
-    align-items: center;
-    width: 140px;
-  }
-
-  .forecast-card img {
-    width: 60px;
+    width: 100%;
+    grid-template-rows: auto auto;
+    text-align: center;
   }
 
   .forecast-card p {
     font-size: 0.95rem;
-    text-align: center;
   }
 }
-
-
