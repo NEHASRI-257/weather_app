@@ -1,4 +1,4 @@
-/* GLOBAL */
+/* RESET & BASE */
 * {
   margin: 0;
   padding: 0;
@@ -13,6 +13,7 @@ body {
   padding-top: 60px;
 }
 
+/* HEADER */
 .display-2 {
   color: #4db6ac;
   font-weight: 700;
@@ -28,18 +29,8 @@ body {
 
 /* INPUT SECTION */
 #input-container {
-  display: flex;
-  flex-direction: column;
   gap: 12px;
-  align-items: center;
   margin: 20px 0;
-}
-
-@media (min-width: 576px) {
-  #input-container {
-    flex-direction: row;
-    justify-content: center;
-  }
 }
 
 #input {
@@ -73,13 +64,9 @@ body {
   background-color: #399b94;
 }
 
-/* OUTPUT CONTAINER */
-#output-container {
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-  opacity: 1;
-  transform: translateY(0);
+/* HIDE GREEN BAR IF NO CONTENT */
+#output-container:not(.visible) {
+  display: none;
 }
 
 /* CURRENT WEATHER */
@@ -104,14 +91,22 @@ body {
   margin: auto;
 }
 
-/* FORECAST CARD */
+/* FORECAST CARDS */
 .forecast-card {
   background-color: #f3b562;
-  padding: 20px;
   border-radius: 18px;
   text-align: center;
   color: #4a3c1b;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  min-height: 240px;
+  max-width: 250px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .forecast-card:hover {
@@ -129,12 +124,12 @@ body {
   width: 60px;
 }
 
-/* CENTER LAST TWO */
+/* CENTER LAST 2 CARDS IN SECOND ROW */
 .forecast-card:nth-last-child(-n+2):nth-child(n+4) {
   justify-self: center;
 }
 
-/* RESPONSIVE GRID */
+/* RESPONSIVE LAYOUT */
 @media (max-width: 768px) {
   #forecast-div {
     grid-template-columns: repeat(2, 1fr);
@@ -146,4 +141,3 @@ body {
     grid-template-columns: 1fr;
   }
 }
-
