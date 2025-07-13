@@ -1,5 +1,3 @@
-/* ------------------ GLOBAL STYLES ------------------ */
-
 * {
   margin: 0;
   padding: 0;
@@ -15,22 +13,19 @@ body {
 }
 
 .display-2 {
-  text-align: center;
   color: #4db6ac;
   font-weight: 700;
   font-size: 3rem;
 }
 
 #tagline {
-  text-align: center;
-  font-weight: 500;
   color: #7a7a7a;
   margin-bottom: 25px;
   font-size: 1.2rem;
+  font-weight: 500;
 }
 
-/* ------------------ INPUT SECTION ------------------ */
-
+/* Input Section */
 #input-container {
   display: flex;
   flex-direction: column;
@@ -51,15 +46,14 @@ body {
   font-size: 16px;
   border-radius: 25px;
   border: 2px solid #4db6ac;
-  width: 100%;
   max-width: 300px;
-  outline: none;
-  transition: border-color 0.3s ease;
+  width: 100%;
 }
 
 #input:focus {
   border-color: #f3b562;
   box-shadow: 0 0 8px #f3b562aa;
+  outline: none;
 }
 
 #button {
@@ -69,8 +63,8 @@ body {
   border-radius: 25px;
   background-color: #4db6ac;
   color: white;
-  cursor: pointer;
   font-weight: 600;
+  cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
@@ -78,33 +72,25 @@ body {
   background-color: #399b94;
 }
 
-/* ------------------ OUTPUT SECTION ------------------ */
-
+/* Output Container */
 #output-container {
   display: flex;
+  flex-direction: column;
   gap: 40px;
-  justify-content: center;
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
-}
-
-#output-container.visible {
   opacity: 1;
   transform: translateY(0);
 }
 
-/* ------------------ CURRENT WEATHER ------------------ */
-
+/* Current Weather */
 #current-div {
-  flex: 1 1 40%;
-  max-width: 400px;
-  padding: 30px;
   background-color: #a8d5ba;
   border-radius: 20px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
   text-align: center;
   color: #2f4f4f;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  max-width: 400px;
+  width: 100%;
 }
 
 #current-div h3 {
@@ -129,47 +115,30 @@ body {
   font-weight: 500;
 }
 
-/* ------------------ FORECAST SECTION ------------------ */
-
+/* Forecast Grid */
 #forecast-div {
-  flex: 1 1 50%;
-  max-width: 400px;
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
+  width: 100%;
+  max-width: 900px;
+  margin: auto;
 }
 
-#forecast-div.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* ------------------ FORECAST CARD ------------------ */
-
+/* Forecast Card */
 .forecast-card {
   background-color: #f3b562;
   padding: 20px;
   border-radius: 18px;
   color: #4a3c1b;
-  text-align: left;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
-  display: grid;
-  grid-template-rows: auto auto;
-  gap: 10px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
 }
 
 .forecast-card:hover {
   transform: scale(1.05);
   box-shadow: 0 10px 30px rgba(243, 181, 98, 0.4);
-}
-
-.forecast-card img {
-  width: 60px;
-  border-radius: 10px;
 }
 
 .forecast-card p {
@@ -178,27 +147,20 @@ body {
   font-weight: 600;
 }
 
-/* ------------------ RESPONSIVE ------------------ */
+/* Center last two cards in second row */
+.forecast-card:nth-last-child(-n+2):nth-child(n+4) {
+  justify-self: center;
+}
 
+/* Responsive Grid */
 @media (max-width: 768px) {
-  #output-container {
-    flex-direction: column;
-    gap: 30px;
-  }
-
-  #current-div,
   #forecast-div {
-    max-width: 100%;
-    flex: none;
+    grid-template-columns: repeat(2, 1fr);
   }
+}
 
-  .forecast-card {
-    width: 100%;
-    grid-template-rows: auto auto;
-    text-align: center;
-  }
-
-  .forecast-card p {
-    font-size: 0.95rem;
+@media (max-width: 480px) {
+  #forecast-div {
+    grid-template-columns: 1fr;
   }
 }
