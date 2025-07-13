@@ -3,9 +3,6 @@ const button = document.querySelector('#button');
 const output = document.querySelector('#output-container');
 const currentDiv = document.querySelector('#current-div');
 const forecastDiv = document.querySelector('#forecast-div');
-const inputContainer = document.querySelector('#input-container');
-const title = document.querySelector('.display-2');
-const tagline = document.querySelector('#tagline');
 
 const API_KEY = '7054e9df9b4f86f9c2e31dea430445e2';
 
@@ -16,16 +13,11 @@ function delay(ms) {
 async function getWeather() {
   currentDiv.innerHTML = '';
   forecastDiv.innerHTML = '';
-  inputContainer.classList.add('up');
-  title.classList.add('up');
-  tagline.classList.add('up');
   output.classList.remove('visible');
-  currentDiv.classList.remove('visible');
-  forecastDiv.classList.remove('visible');
 
   const city = input.value.trim();
   if (!city) {
-    alert("City name can't be empty, Enter a valid City name");
+    alert("City name can't be empty");
     input.value = '';
     return;
   }
@@ -43,7 +35,7 @@ async function getWeather() {
 
     currentDiv.innerHTML = `
       <h3>${city.toUpperCase()}</h3>
-      <h5>Current Weather Data</h5>
+      <h5>Current Weather</h5>
       <hr>
       <h4>Temperature: <strong>${temp}</strong>°C</h4>
       <p>Humidity: ${humidity}%</p>
@@ -78,27 +70,18 @@ async function getWeather() {
     });
 
     input.value = '';
-    await delay(100);
+    await delay(200);
     output.classList.add('visible');
-    await delay(300);
-    currentDiv.classList.add('visible');
-    await delay(300);
-    forecastDiv.classList.add('visible');
-    await delay(300);
-    title.classList.remove('up');
-    tagline.classList.remove('up');
-    inputContainer.classList.remove('up');
 
   } catch (error) {
-    alert('City Not Found, Enter a valid City Name');
-    console.error('Error:', error);
+    alert('City not found');
+    console.error(error);
     input.value = '';
   }
 }
 
 button.addEventListener('click', getWeather);
 input.addEventListener('keydown', (event) => {
-  if (event.key === 'Enter') {
-    getWeather();
-  }
+  if (event.key === 'Enter') getWeather();
 });
+
