@@ -58,4 +58,8 @@ I thoroughly tested the app on multiple browsers and devices to ensure:
 ### Outcome  
 *Sky Cast* is a fast, responsive, and user-friendly weather forecasting tool that showcases clean UI design and functional integration with third-party APIs. This project helped reinforce my understanding of asynchronous JavaScript, API handling, and responsive web design using only core technologies. Additionally, developing Sky Cast allowed me to further enhance my debugging strategies, optimize web performance, and deepen my knowledge of accessible web development best practices.
 
+<img width="1872" height="908" alt="Image" src="https://github.com/user-attachments/assets/ad174fd3-8448-4b4d-861d-190f66a0bbee" />
+<img width="1885" height="918" alt="Image" src="https://github.com/user-attachments/assets/68e0e847-7812-45b3-9ba2-9a559e372632" />
+<img width="1892" height="856" alt="Image" src="https://github.com/user-attachments/assets/0f26f88b-2860-496f-964b-e5aca0ec2143" />
+
 
