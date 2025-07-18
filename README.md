@@ -1,4 +1,10 @@
-## 💼 Company: CodTech IT Solutions  
+## Company: CODTECH IT SOLUTIONS
+##  Name: NEHASRI H
+##  Intern Id: CT08DM1117
+##  Domain: MERN STACK WEB DEVELOPMENT
+##  Duration: 8 WEEKS
+##  Mentor:NEELA SANTHOSH
+
 ## 💻 Project Task Description — Sky Cast
 
 As part of my work at **CodTech IT Solutions**, I independently designed and developed a responsive weather forecasting application called **Sky Cast**. The aim of the project was to create a clean and reliable web-based tool that provides live weather conditions and short-term forecasts for any city around the globe.
